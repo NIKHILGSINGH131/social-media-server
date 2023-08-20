@@ -28,7 +28,7 @@ app.use(cookieParser());
 let origin='http://localhost:3000';
 console.log('here env',process.env.NODE_ENV);
 if(process.env.NODE_ENV === 'production'){
-  baseURL=process.env.CORS_ORIGIN;
+  origin=process.env.CORS_ORIGIN;
 }
 
 
