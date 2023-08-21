@@ -25,16 +25,17 @@ app.use(express.json({limit:'10mb'}));
 app.use(morgan("common"));
 app.use(cookieParser());
 
-// let origin='http://localhost:3000';
-// console.log('here env',process.env.NODE_ENV);
-// if(process.env.NODE_ENV === 'production'){
-//   origin=process.env.CORS_ORIGIN;
-// }
+let origin='http://localhost:3000';
+console.log('here env',process.env.NODE_ENV);
+if(process.env.NODE_ENV === 'production'){
+  origin=process.env.CORS_ORIGIN;
+}
 
 
 app.use(cors({
   credentials:true,
-  origin:process.env.CORS_ORIGIN
+  // origin:process.env.CORS_ORIGIN
+  origin
 }))
 
 app.use("/auth", authRouter);
