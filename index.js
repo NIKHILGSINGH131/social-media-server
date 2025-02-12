@@ -41,7 +41,7 @@ app.use(cookieParser());
 const allowedOrigins = [
   "http://localhost:3000", 
   "https://client-app-6eix9.ondigitalocean.app", // Your deployed frontend
-  "http://13.210.135.136:3000", // Public IP of Frontend
+  "http://54.153.215.109:3000", // Public IP of Frontend
   "https://yourdomain.com" // Add your domain if using one
 ];
 
